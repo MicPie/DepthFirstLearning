@@ -3,8 +3,8 @@ https://www.depthfirstlearning.com/2018/InfoGAN
 
 1 Information Theory
 
-Required Reading:
-[checkbox:checked]Chapter 1.6 from Pattern Recognition and Machine Learning / Bishop. (“PRML”)<br>
+Required Reading:<br>
+'[x]'Chapter 1.6 from Pattern Recognition and Machine Learning / Bishop. (“PRML”)<br>
 [checkbox:checked]A good intuitive explanation of Entropy, from Quora.
 Optional Reading:
 
