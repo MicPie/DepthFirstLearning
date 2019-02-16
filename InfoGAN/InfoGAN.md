@@ -140,4 +140,4 @@ See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-th
 ## 1 Information Theory
 
 ### Required Reading:
-- [x] Chapt
+- [ ] Chapt
