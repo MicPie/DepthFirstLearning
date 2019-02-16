@@ -1,5 +1,5 @@
 # InfoGAN
-https://www.depthfirstlearning.com/2018/InfoGAN
+Material from the lecture about InfoGAN from https://www.depthfirstlearning.com/2018/InfoGAN.
 
 ## 1 Information Theory
 
@@ -9,11 +9,11 @@ https://www.depthfirstlearning.com/2018/InfoGAN
 
 ### Optional Reading:
 - [x] Notes on Kullback-Leibler Divergence and Likelihood Theory
-For more perspectives and deeper dependencies, see Metacademy:
-Entropy
-Mutual Information
-KL diverence
-Visual Information Theory
+- [ ] For more perspectives and deeper dependencies, see Metacademy:
+* Entropy
+* Mutual Information
+* KL diverence
+- [x] Visual Information Theory
 
 ### Questions:
 - [ ] From PRML:
