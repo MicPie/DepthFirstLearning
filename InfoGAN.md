@@ -27,6 +27,7 @@ H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)<br>
 --> No mutual information if x and y are independent:<br>
 I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)<br>
 <br>
+
 - [ ] 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.<br>
  Lookup 2nd derivative<br>
 <br>
