@@ -18,7 +18,7 @@ For more perspectives and deeper dependencies, see Metacademy:
 
 ### Questions:
 1. From PRML:
- - 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.<br>
+- 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.<br>
 
 H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)<br>
 
@@ -28,7 +28,7 @@ H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)<br>
 I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)<br>
 <br>
 
- - 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.<br>
+- 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.<br>
  Lookup 2nd derivative<br>
 <br>
 - [ ] 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).<br>
