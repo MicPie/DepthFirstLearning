@@ -13,6 +13,7 @@ Material from the lecture about InfoGAN from https://www.depthfirstlearning.com/
 * Entropy
 * Mutual Information
 * KL diverence
+
 - [x] Visual Information Theory
 
 ### Questions:
