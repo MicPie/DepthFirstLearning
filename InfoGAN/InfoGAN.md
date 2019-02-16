@@ -127,4 +127,11 @@ https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --
 Very nice picture for p(x,y) https://en.wikipedia.org/wiki/Joint_probability_distribution
 
 #### :black_medium_small_square: In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?
-???
+See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-theory.
+
+
+## 2 Generative Adversarial Networks (GAN)
+
+### Required Reading:
+- [ ] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
+- [ ] [The original GAN paper](https://arxiv.org/abs/1406.2661)
