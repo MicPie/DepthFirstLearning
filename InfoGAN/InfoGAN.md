@@ -1,6 +1,24 @@
 # InfoGAN
 Material from the lecture about InfoGAN from https://www.depthfirstlearning.com/2018/InfoGAN.
 
+- [InfoGAN](#infogan)
+  - [1 Information Theory](#1-information-theory)
+    - [Required Reading:](#required-reading)
+    - [Optional Reading:](#optional-reading)
+    - [Questions:](#questions)
+      - [:black_medium_small_square:From PRML:](#blackmediumsmallsquarefrom-prml)
+        - [:black_small_square: 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.](#blacksmallsquare-131-consider-two-variables-x-and-y-having-joint-distribution-px-y-show-that-the-differential-entropy-of-this-pair-of-variables-satisfies-hxy--hx--hy-with-equality-if-and-only-if-x-and-y-are-statistically-independent)
+        - [:black_small_square: 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.](#blacksmallsquare-136-a-strictly-convex-function-is-defined-as-one-for-which-every-chord-lies-above-the-function-show-that-this-is-equivalent-to-the-condition-that-the-second-derivative-of-the-function-be-positive)
+        - [:black_small_square: 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).](#blacksmallsquare-137-using-the-definition-1111-together-with-the-product-rule-of-probability-prove-the-result-1112)
+        - [:black_small_square: 1.38 Using proof by induction, show that the inequality (1.114) for convex functions implies the result (1.115).](#blacksmallsquare-138-using-proof-by-induction-show-that-the-inequality-1114-for-convex-functions-implies-the-result-1115)
+        - [:black_small_square: 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.](#blacksmallsquare-139-consider-two-binary-variables-x-and-y-having-the-joint-distribution-given-in-table-13)
+        - [:black_small_square: 1.41 Using the sum and product rules of probability, show that the mutual information I(x, y) satisfies the relation (1.121).](#blacksmallsquare-141-using-the-sum-and-product-rules-of-probability-show-that-the-mutual-information-ix-y-satisfies-the-relation-1121)
+      - [:black_medium_small_square: How is Mutual Information similar to correlation? How are they different? Are they directly related under some conditions?](#blackmediumsmallsquare-how-is-mutual-information-similar-to-correlation-how-are-they-different-are-they-directly-related-under-some-conditions)
+      - [:black_medium_small_square: In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?](#blackmediumsmallsquare-in-classification-problems-minimizing-cross-entropy-loss-is-the-same-as-minimizing-the-kl-divergence-of-the-predicted-class-distribution-from-the-true-class-distribution-why-do-we-minimize-the-kl-rather-than-other-measures-such-as-l2-distance)
+  - [2 Generative Adversarial Networks (GAN)](#2-generative-adversarial-networks-gan)
+    - [Required Reading:](#required-reading-1)
+
+
 ## 1 Information Theory
 
 ### Required Reading:
