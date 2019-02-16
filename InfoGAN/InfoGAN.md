@@ -42,11 +42,11 @@ H[x,y] = H[y|x] + H[x] (1.112)
 ##### 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.
 The joint distribution p(x, y) for two binary variables x and y used:\
 | x / y | 0 | 1 | p(x) |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 0 |	1/3	| 1/3 |	2/3 |
-1	0	1/3	1/3<br>
-p(y)	1/3	2/3	1<br>
-<br>
+| 1 |	0 |	1/3 |	1/3 |
+| p(y) | 1/3 | 2/3 | 1 |
+
 H(x) =  ∑(over x) p(x) log2(1/p(x)) = - ∑(over x) p(x) log2(p(x))<br>
 H(x|y) =  - ∑(over x,y) p(x,y) log2(p(x,y)/p(y))<br>
 H(x,y) =  - ∑(over x,y) p(x,y) log2(p(x,y))<br>
