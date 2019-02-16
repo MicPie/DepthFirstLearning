@@ -1,4 +1,5 @@
-#[InfoGAN](https://www.depthfirstlearning.com/2018/InfoGAN)
+#InfoGAN
+(https://www.depthfirstlearning.com/2018/InfoGAN)
 
 1 Information Theory
 
