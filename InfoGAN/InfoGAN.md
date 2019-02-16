@@ -159,11 +159,11 @@ The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsL
 
 ln = −wn [yn⋅log(σ(xn)) + (1−yn)⋅log(1−σ(xn))]
 
-The **non-saturating loss**:\
+The **non-saturating** loss:\
 if yn == 0: ln = −log(1−σ(xn))\
 if yn == 1: ln = −log(σ(xn))
 
-The **saturating loss**:\
+The **saturating** loss:\
 if yn == 0: ln = 1−log(1−σ(xn))\
 if yn == 1: ln = 1−log(σ(xn))
 
