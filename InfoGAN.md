@@ -21,11 +21,8 @@ For more perspectives and deeper dependencies, see Metacademy:
 ##### 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.
 
 H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)
-
 H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)
-
 --> No mutual information if x and y are independent:
-
 I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)
 
 
