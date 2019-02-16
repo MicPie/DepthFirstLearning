@@ -19,10 +19,19 @@ For more perspectives and deeper dependencies, see Metacademy:
 ### Questions:
 #### From [Pattern Recognition and Machine Learning (PRML)](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf):
 ##### 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.
-H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)<br>
-H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)<br>
---> No mutual information if x and y are independent:<br>
+
+H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)
+
+
+H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)
+
+
+--> No mutual information if x and y are independent:
+
+
 I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)
+
+
 #####  1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.
 Lookup 2nd derivative
 ##### 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).
