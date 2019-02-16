@@ -132,3 +132,13 @@ See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-th
 - [ ] [The original GAN paper](https://arxiv.org/abs/1406.2661)
 
 https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --> Jensen inequality?
+
+### Questions:
+
+##### :black_small_square: Prove that 0≤JSD(P||Q)≤1 bit for all P, Q. When are the bounds achieved?
+
+##### :black_small_square: What are the bounds for KL divergence? When are those bounds achieved?
+
+##### :black_small_square: In the paper, why do they say “In practice, equation 1 may not provide sufficient gradient for G to learn well. Early in learning, when G is poor, D can reject samples with high confidence because they are clearly different from the training data. In this case, log(1−D(G(z)))saturates”?
+
+##### :black_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating discriminator loss.
