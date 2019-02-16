@@ -32,7 +32,7 @@ Lookup 2nd derivative
 
 
 ##### 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).
-H[x,y] = H[y|x] + H[x] (1.112)
+(1.112) H[x,y] = H[y|x] + H[x]
 
 
 ##### 1.38 Using proof by induction, show that the inequality (1.114) for convex functions implies the result (1.115).
@@ -51,8 +51,9 @@ The joint distribution p(x, y) for two binary variables x and y used:\
 H(x) =  ∑(over x) p(x) log2(1/p(x)) = - ∑(over x) p(x) log2(p(x))\
 H(x|y) =  - ∑(over x,y) p(x,y) log2(p(x,y)/p(y))\
 H(x,y) =  - ∑(over x,y) p(x,y) log2(p(x,y))\
-https://en.wikipedia.org/wiki/Joint_probability_distribution#Draws_from_an_urn\
+https://en.wikipedia.org/wiki/Joint_probability_distribution#Draws_from_an_urn \
 **PRML Page 14?**\
+
 Evaluate the following quantities:\
 (a) H[x]<br>
 H(x) = - 1/3 * log2(1/3) - 0 * log2(0) ??? (very likely wrong?)<br>
@@ -74,7 +75,7 @@ H(x,y) =<br>
 (f) I[x, y]<br>
 I(x,y) =
 ##### 1.41 Using the sum and product rules of probability, show that the mutual information I(x, y) satisfies the relation (1.121).<br>
-I[x, y] = H[x] − H[x|y] = H[y] − H[y|x]. (1.121)
+(1.121) I[x, y] = H[x] − H[x|y] = H[y] − H[y|x]
 #### How is Mutual Information similar to correlation? How are they different? Are they directly related under some conditions?
 “Intuitively, mutual information measures the information that X and Y share: It measures how much knowing one of these variables reduces uncertainty about the other. For example, if X and Y are independent, then knowing X does not give any information about Y and vice versa, so their mutual information is zero. At the other extreme, if X is a deterministic function of Y and Y is a deterministic function of X then all information conveyed by X is shared with Y: knowing X determines the value of Y and vice versa. As a result, in this case the mutual information is the same as the uncertainty contained in Y (or X) alone, namely the entropy of Y (or X). Moreover, this mutual information is the same as the entropy of X and as the entropy of Y. (A very special case of this is when X and Y are the same random variable.)<br>
 Mutual information is a measure of the inherent dependence expressed in the joint distribution of X and Y relative to the joint distribution of X and Y under the assumption of independence. Mutual information therefore measures dependence in the following sense: I(X;Y) = 0 if and only if X and Y are independent random variables. This is easy to see in one direction: if X and Y are independent, then p(x,y) = p(x) p(y), and therefore:<br>
