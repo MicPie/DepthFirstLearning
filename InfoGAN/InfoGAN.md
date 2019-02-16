@@ -24,8 +24,7 @@ H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)
 
 H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)
 
---> No mutual information if x and y are independent:
-
+No mutual information if x and y are independent:
 I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)
 
 
