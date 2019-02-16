@@ -18,19 +18,16 @@ For more perspectives and deeper dependencies, see Metacademy:
 
 ### Questions:
 #### From PRML:
-- 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.<br><br>
+##### 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.<br><br>
 H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)<br>
 H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)<br>
 --> No mutual information if x and y are independent:<br>
-I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)<br> 
-<br>
-- 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.<br><br>
- Lookup 2nd derivative<br>
-<br>
-- 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).<br><br>
-H[x,y] = H[y|x] + H[x] (1.112)<br>
-<br>
-- [ ] 1.38 Using proof by induction, show that the inequality (1.114) for convex functions implies the result (1.115).<br>
+I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)
+#####  1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.<br><br>
+Lookup 2nd derivative
+##### 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).<br><br>
+H[x,y] = H[y|x] + H[x] (1.112)
+##### Using proof by induction, show that the inequality (1.114) for convex functions implies the result (1.115).<br>
 ???<br>
 <br>
 - [ ] 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.<br>
