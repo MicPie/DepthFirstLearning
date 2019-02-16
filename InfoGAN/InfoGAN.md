@@ -142,3 +142,14 @@ https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --
 ##### :black_small_square: In the paper, why do they say “In practice, equation 1 may not provide sufficient gradient for G to learn well. Early in learning, when G is poor, D can reject samples with high confidence because they are clearly different from the training data. In this case, log(1−D(G(z)))saturates”?
 
 ##### :black_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating discriminator loss.
+See posted [TF implementation](https://colab.research.google.com/drive/1joM97ITFowvWU_qgRjQRiOKajHQKKH80#forceEdit=true&offline=tru&sandboxMode=true&scrollTo=gfxatvsVV5LA):
+```def discriminator_loss(real_output, generated_output):
+    return -tf.reduce_mean(tf.log(real_output) + tf.log(1-generated_output))
+
+# non-saturation G loss
+def ns_generator_loss(generated_output):
+    return -tf.reduce_mean(tf.log(generated_output))
+
+# saturating G loss
+def s_generator_loss(generated_output):
+    return tf.reduce_mean(1-tf.log(generated_output))```
