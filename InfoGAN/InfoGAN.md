@@ -141,4 +141,4 @@ See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-th
 
 ### Required Reading:
 - [ ] Chapt
-- [ ] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
+- [ ] TEXT [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
