@@ -5,16 +5,16 @@ Material from the lecture about InfoGAN from https://www.depthfirstlearning.com/
 
 ### Required Reading:
 - [x] Chapter 1.6 from Pattern Recognition and Machine Learning / Bishop. (“PRML”)<br>
-- [x] A good intuitive explanation of Entropy, from Quora.
+- [x] [A good intuitive explanation of Entropy, from Quora.](https://www.quora.com/What-is-an-intuitive-explanation-of-the-concept-of-entropy-in-information-theory/answer/Peter-Gribble)
 
 ### Optional Reading:
-- [x] Notes on Kullback-Leibler Divergence and Likelihood Theory
+- [x] [Notes on Kullback-Leibler Divergence and Likelihood Theory](https://arxiv.org/pdf/1404.2000.pdf)
 - [ ] For more perspectives and deeper dependencies, see Metacademy:
-* Entropy
-* Mutual Information
-* KL diverence
+- [ ] [Entropy](https://metacademy.org/graphs/concepts/entropy)
+- [ ] [Mutual Information](https://metacademy.org/graphs/concepts/mutual_information)
+- [ ] [KL diverence](https://metacademy.org/graphs/concepts/kl_divergence)
 
-- [x] Visual Information Theory
+- [x] [Visual Information Theory](https://colah.github.io/posts/2015-09-Visual-Information/) (Highly recommended!)
 
 ### Questions:
 - [ ] From PRML:
