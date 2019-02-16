@@ -14,8 +14,11 @@ Entropy
 Mutual Information
 KL diverence
 Visual Information Theory
-Questions:
 
-From PRML: 1.31, 1.36, 1.37, 1.38, 1.39, 1.41.
-How is Mutual Information similar to correlation? How are they different? Are they directly related under some conditions?
-In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?
+### Questions:
+- [] From PRML:
+1.31, 1.36, 1.37, 1.38, 1.39, 1.41.
+
+- [] How is Mutual Information similar to correlation? How are they different? Are they directly related under some conditions?
+
+- [] In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?
