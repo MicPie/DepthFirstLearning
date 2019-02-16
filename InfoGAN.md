@@ -4,11 +4,11 @@ https://www.depthfirstlearning.com/2018/InfoGAN
 1 Information Theory
 
 Required Reading:<br>
-- [x]Chapter 1.6 from Pattern Recognition and Machine Learning / Bishop. (“PRML”)<br>
+- [x] Chapter 1.6 from Pattern Recognition and Machine Learning / Bishop. (“PRML”)<br>
 - [x] A good intuitive explanation of Entropy, from Quora.
-Optional Reading:
 
-Notes on Kullback-Leibler Divergence and Likelihood Theory
+Optional Reading:
+- [x] Notes on Kullback-Leibler Divergence and Likelihood Theory
 For more perspectives and deeper dependencies, see Metacademy:
 Entropy
 Mutual Information
