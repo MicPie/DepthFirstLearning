@@ -136,3 +136,8 @@ See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-th
 
 - [ ] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
 - [ ] [The original GAN paper](https://arxiv.org/abs/1406.2661)
+
+## 1 Information Theory
+
+### Required Reading:
+- [x] Chapt
