@@ -155,3 +155,4 @@ def ns_generator_loss(generated_output):
 def s_generator_loss(generated_output):
     return tf.reduce_mean(1-tf.log(generated_output))
 ```
+Can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real.
