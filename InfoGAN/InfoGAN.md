@@ -171,4 +171,4 @@ if yn == 1: 1−log(σ(xn))
 
 --> Check with implementation?
 
---> Colab notebook does not show a reald difference?
+--> Colab notebook does not show a real difference?
