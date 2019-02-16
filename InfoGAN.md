@@ -13,7 +13,7 @@ Material from the lecture about InfoGAN from https://www.depthfirstlearning.com/
 - [ ] [Entropy](https://metacademy.org/graphs/concepts/entropy)
 - [ ] [Mutual Information](https://metacademy.org/graphs/concepts/mutual_information)
 - [ ] [KL diverence](https://metacademy.org/graphs/concepts/kl_divergence)
-- [x] [Visual Information Theory](https://colah.github.io/posts/2015-09-Visual-Information/) (Highly recommended!)
+- [x] [Visual Information Theory](https://colah.github.io/posts/2015-09-Visual-Information/) (Highly recommended!)
 
 ### Questions:
 - [ ] From PRML:
