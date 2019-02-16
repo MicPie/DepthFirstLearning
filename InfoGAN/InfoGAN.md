@@ -157,17 +157,13 @@ def s_generator_loss(generated_output):
 ```
 The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
 
-The **non-saturating loss**:
-
 ln = −wn [yn⋅log(σ(xn)) + (1−yn)⋅log(1−σ(xn))]
 
+The **non-saturating loss**:\
 if yn == 0: ln = −log(1−σ(xn))\
 if yn == 1: ln = −log(σ(xn))
 
-The **saturating loss**:
-
-ln = −wn [yn⋅log(σ(xn)) + (1−yn)⋅log(1−σ(xn))]
-
+The **saturating loss**:\
 if yn == 0: ln = 1−log(1−σ(xn))\
 if yn == 1: ln = 1−log(σ(xn))
 
