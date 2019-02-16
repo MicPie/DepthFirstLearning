@@ -121,8 +121,6 @@ So the two are not antagonistic—they are complementary, describing different a
 
 Picture from https://www.quora.com/What-is-the-difference-between-mutual-information-and-correlation
 
-https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --> Jensen inequality?
-
 
 #### :black_medium_small_square: In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?
 See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-theory.
@@ -132,3 +130,4 @@ See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-th
 ### Required Reading:
 - [ ] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
 - [ ] [The original GAN paper](https://arxiv.org/abs/1406.2661)
+https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --> Jensen inequality?
