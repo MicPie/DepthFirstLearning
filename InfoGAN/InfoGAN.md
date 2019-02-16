@@ -19,7 +19,6 @@ For more perspectives and deeper dependencies, see Metacademy:
 ### Questions:
 #### :black_medium_small_square:From PRML:
 ##### :black_small_square: 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.
-
 H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)\
 H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)
 
@@ -27,7 +26,7 @@ No mutual information if x and y are independent:\
 I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)
 
 
-#####  :black_small_square: 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.
+##### :black_small_square: 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.
 Lookup 2nd derivative
 
 
@@ -56,12 +55,11 @@ H(x,y) =  - ∑(over x,y) p(x,y) log2(p(x,y))
 https://en.wikipedia.org/wiki/Joint_probability_distribution#Draws_from_an_urn
 
 
-**PRML Page 14?**
+**CHECK PRML Page 14?**
 
 Evaluate the following quantities:
 
 (a) H[x]
-
 
 H(x) = - 1/3 * log2(1/3) - 0 * log2(0) ??? (very likely wrong?)\
 H(x) = - 2/3 * log2(2/3) - 1/3 * log2(1/3) = 
@@ -93,7 +91,7 @@ H(x,y) =
 I(x,y) = 
 
 
-##### :black_small_square: 1.41 Using the sum and product rules of probability, show that the mutual information I(x, y) satisfies the relation (1.121).<br>
+##### :black_small_square: 1.41 Using the sum and product rules of probability, show that the mutual information I(x, y) satisfies the relation (1.121).
 (1.121) I[x, y] = H[x] − H[x|y] = H[y] − H[y|x]
 
 
@@ -127,6 +125,5 @@ https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --
 
 
 Very nice picture for p(x,y) https://en.wikipedia.org/wiki/Joint_probability_distribution
-
 
 ####  :black_medium_small_square: In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?<br>
