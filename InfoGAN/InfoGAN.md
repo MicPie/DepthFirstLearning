@@ -133,5 +133,5 @@ See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-th
 ## 2 Generative Adversarial Networks (GAN)
 
 ### Required Reading:
-- [x] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
-- [ ] [The original GAN paper](https://arxiv.org/abs/1406.2661)
+ - [ ] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
+ - [ ] [The original GAN paper](https://arxiv.org/abs/1406.2661)
