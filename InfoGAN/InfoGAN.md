@@ -128,8 +128,8 @@ See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-th
 ## 2 Generative Adversarial Networks (GAN)
 
 ### Required Reading:
-- [ ] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
-- [ ] [The original GAN paper](https://arxiv.org/abs/1406.2661)
+- [x] [JS Divergence](https://en.wikipedia.org/wiki/Jensen–Shannon_divergence)
+- [x] [The original GAN paper](https://arxiv.org/abs/1406.2661)
 
 https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --> Jensen inequality?
 
