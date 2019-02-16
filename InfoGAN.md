@@ -1,13 +1,13 @@
 # InfoGAN
-(https://www.depthfirstlearning.com/2018/InfoGAN)
+https://www.depthfirstlearning.com/2018/InfoGAN
 
-1 Information Theory
+## 1 Information Theory
 
-Required Reading:<br>
+### Required Reading:
 - [x] Chapter 1.6 from Pattern Recognition and Machine Learning / Bishop. (“PRML”)<br>
 - [x] A good intuitive explanation of Entropy, from Quora.
 
-Optional Reading:
+### Optional Reading:
 - [x] Notes on Kullback-Leibler Divergence and Likelihood Theory
 For more perspectives and deeper dependencies, see Metacademy:
 Entropy
