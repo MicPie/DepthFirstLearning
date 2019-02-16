@@ -155,20 +155,22 @@ def ns_generator_loss(generated_output):
 def s_generator_loss(generated_output):
     return tf.reduce_mean(1-tf.log(generated_output))
 ```
-The **non-saturating loss** can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
+The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
+
+The **non-saturating loss**:
 
 ln = −wn [yn⋅log(σ(xn)) + (1−yn)⋅log(1−σ(xn))]
 
-if yn == 0: ln = −log(1−σ(xn))
+if yn == 0: ln = −log(1−σ(xn))\
 if yn == 1: ln = −log(σ(xn))
 
-The **saturating loss** can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
+The **saturating loss**:
 
 ln = −wn [yn⋅log(σ(xn)) + (1−yn)⋅log(1−σ(xn))]
 
-if yn == 0: ln = 1−log(1−σ(xn))
+if yn == 0: ln = 1−log(1−σ(xn))\
 if yn == 1: ln = 1−log(σ(xn))
 
-Check with implementation?
+--> Check with implementation?
 
-Colab notebook does not show a reald difference?
+--> Colab notebook does not show a reald difference?
