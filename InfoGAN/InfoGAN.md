@@ -48,19 +48,12 @@ The joint distribution p(x, y) for two binary variables x and y used:\
 | 1 | 0 | 1/3 | 1/3 |
 | p(y) | 1/3 | 2/3 | 1 |
 
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
-
-H(x) =  ∑(over x) p(x) log2(1/p(x)) = - ∑(over x) p(x) log2(p(x))<br>
-H(x|y) =  - ∑(over x,y) p(x,y) log2(p(x,y)/p(y))<br>
-H(x,y) =  - ∑(over x,y) p(x,y) log2(p(x,y))<br>
-<br>
-https://en.wikipedia.org/wiki/Joint_probability_distribution#Draws_from_an_urn<br>
-**PRML Page 14?**<br>
-<br>
-Evaluate the following quantities:<br>
+H(x) =  ∑(over x) p(x) log2(1/p(x)) = - ∑(over x) p(x) log2(p(x))\
+H(x|y) =  - ∑(over x,y) p(x,y) log2(p(x,y)/p(y))\
+H(x,y) =  - ∑(over x,y) p(x,y) log2(p(x,y))\
+https://en.wikipedia.org/wiki/Joint_probability_distribution#Draws_from_an_urn\
+**PRML Page 14?**\
+Evaluate the following quantities:\
 (a) H[x]<br>
 H(x) = - 1/3 * log2(1/3) - 0 * log2(0) ??? (very likely wrong?)<br>
 H(x) = - 2/3 * log2(2/3) - 1/3 * log2(1/3) =<br>
