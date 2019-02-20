@@ -181,10 +181,10 @@ def s_generator_loss(generated_output):
 ```
 Saturating loss seems wrong?
 
-Blue: saturating loss
-Green: non-saturating loss
-Orange: wrong saturating loss?
-Dashed lines: derivation of the loss function
+Blue: saturating loss\
+Green: non-saturating loss\
+Orange: wrong saturating loss?\
+Dashed lines: derivation of the loss functions\
 
 ![InfoGAN_saturation_non-saturating_loss_graph](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_graph.jpg)
 ![InfoGAN_saturation_non-saturating_loss_legend](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_legend.jpg)
@@ -198,6 +198,8 @@ def s_generator_loss(generated_output):
 The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
 
 ln = −wn⋅[yn⋅log(σ(xn))+(1−yn)⋅log(1−σ(xn))]
+
+RECHECK BCE LOSS FORMULAS!!!
 
 The **non-saturating** loss:\
 criterion = ln\
