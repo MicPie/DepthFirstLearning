@@ -102,7 +102,7 @@ H(x,y) = H(y) + H(x|y) = 0,918 + 0,667 bits = 1,585 bits
 
 (f) I[x, y]
 
-I(x,y) = H(x) + H(y) - H(x,y) = 0,252 bits
+I(x,y) = H(x) + H(y) - H(x,y) = H(x) − H(x|y) = H(y) − H(y|x) = 0,252 bits
 
 Other resources:
 https://faculty.math.illinois.edu/~hildebr/408/408jointdiscrete.pdf
