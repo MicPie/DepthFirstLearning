@@ -60,38 +60,38 @@ See PRML p13.
 
 (a) H[x]
 
-p(x0) = p(x0,y0) + p(x0,y1) = 1/3 + 1/3 = 2/3
-p(x1) = p(x1,y0) + p(x1,y1) = 0 + 1/3 = 1/3
+p(x0) = p(x0,y0) + p(x0,y1) = 1/3 + 1/3 = 2/3\
+p(x1) = p(x1,y0) + p(x1,y1) = 0 + 1/3 = 1/3\
 H(x) = H(x0) + H(x1) = - 2/3 log2(2/3) - 1/3 log(1/3) = 0,918 bits 
 
 
 (b) H[y]
 
-p(y0) = p(x0,y0) + p(x1,y0) = 1/3 + 0 = 1/3
-p(y1) = p(x0,y1) + p(x1,y1) = 1/3 + 1/3 = 2/3
+p(y0) = p(x0,y0) + p(x1,y0) = 1/3 + 0 = 1/3\
+p(y1) = p(x0,y1) + p(x1,y1) = 1/3 + 1/3 = 2/3\
 H(y) = H(y0) + H(y1) = - 1/3 log2(1/3) - 2/3 log(2/3) = 0,918 bits
 
 
 (c) H[y|x]
 
-p(X = xi) = Sum over j to L (p(X=xi,Y=yj))
-p(Y=yj|X=xi) nij / ci  (with ci = sum over j for nij)
-p(y0|x0) = (1/3) / (1/3 + 1/3) = 1/2
-p(y1|x0) = (1/3) / (1/3 + 1/3) = 1/2
-p(y0|x1) = (0) / (1/3) = 0
-p(y1|x1) = (1/3) / (1/3) = 1
-H(Y|X) = sum over x,y( -(px,y) log2(p(y|x)) (formula from https://colah.github.io/posts/2015-09-Visual-Information/)
+p(X = xi) = Sum over j to L (p(X=xi,Y=yj))\
+p(Y=yj|X=xi) nij / ci  (with ci = sum over j for nij)\
+p(y0|x0) = (1/3) / (1/3 + 1/3) = 1/2\
+p(y1|x0) = (1/3) / (1/3 + 1/3) = 1/2\
+p(y0|x1) = (0) / (1/3) = 0\
+p(y1|x1) = (1/3) / (1/3) = 1\
+H(Y|X) = sum over x,y( -(px,y) log2(p(y|x)) (formula from https://colah.github.io/posts/2015-09-Visual-Information/)\
 H(y|x) = 0,667 bits
 
 
 
 (d) H[x|y]
 
-p(x0|y0) = (1/3) / (1/3 + 0) = 1
-p(x1|y0) = (0) / (1/3 + 0) = 0
-p(x0|y1) = (1/3) / (1/3 + 1/3) = 1/2
-p(x1|y1) = (1/3) / (1/3 + 1/3) = 1/2
-H(X|Y) = sum over x,y( -(px,y) log2(p(x|y))
+p(x0|y0) = (1/3) / (1/3 + 0) = 1\
+p(x1|y0) = (0) / (1/3 + 0) = 0\
+p(x0|y1) = (1/3) / (1/3 + 1/3) = 1/2\
+p(x1|y1) = (1/3) / (1/3 + 1/3) = 1/2\
+H(X|Y) = sum over x,y( -(px,y) log2(p(x|y))\
 H(x|y) = 0,667 bits
 
 
