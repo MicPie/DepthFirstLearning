@@ -56,36 +56,59 @@ H(x,y) =  - ∑(over x,y) p(x,y) log2(p(x,y))
 
 Evaluate the following quantities:
 
+See PRML p13.
+
 (a) H[x]
 
-H(x) = - 1/3 * log2(1/3) - 0 * log2(0) ??? (very likely wrong?)\
-H(x) = - 2/3 * log2(2/3) - 1/3 * log2(1/3) = 
+p(x0) = p(x0,y0) + p(x0,y1) = 1/3 + 1/3 = 2/3
+p(x1) = p(x1,y0) + p(x1,y1) = 0 + 1/3 = 1/3
+H(x) = H(x0) + H(x1) = - 2/3 log2(2/3) - 1/3 log(1/3) = 0,918 bits 
 
 
 (b) H[y]
 
-H(y) = - 1/3 * log2(1/3) - 1/3 * log2(1/3) ??? (very likely wrong?)\
-H(x) = - 1/3 * log2(1/3) - 2/3 * log2(2/3) = 
+p(y0) = p(x0,y0) + p(x1,y0) = 1/3 + 0 = 1/3
+p(y1) = p(x0,y1) + p(x1,y1) = 1/3 + 1/3 = 2/3
+H(y) = H(y0) + H(y1) = - 1/3 log2(1/3) - 2/3 log(2/3) = 0,918 bits
 
 
 (c) H[y|x]
 
-H(y|x) = 
+p(X = xi) = Sum over j to L (p(X=xi,Y=yj))
+p(Y=yj|X=xi) nij / ci  (with ci = sum over j for nij)
+p(y0|x0) = (1/3) / (1/3 + 1/3) = 1/2
+p(y1|x0) = (1/3) / (1/3 + 1/3) = 1/2
+p(y0|x1) = (0) / (1/3) = 0
+p(y1|x1) = (1/3) / (1/3) = 1
+H(Y|X) = sum over x,y( -(px,y) log2(p(y|x)) (formula from https://colah.github.io/posts/2015-09-Visual-Information/)
+H(y|x) = 0,667 bits
+
 
 
 (d) H[x|y]
 
-H(x|y) = 
+p(x0|y0) = (1/3) / (1/3 + 0) = 1
+p(x1|y0) = (0) / (1/3 + 0) = 0
+p(x0|y1) = (1/3) / (1/3 + 1/3) = 1/2
+p(x1|y1) = (1/3) / (1/3 + 1/3) = 1/2
+H(X|Y) = sum over x,y( -(px,y) log2(p(x|y))
+H(x|y) = 0,667 bits
 
 
 (e) H[x, y]
 
-H(x,y) = 
+H(x,y) = H(y) + H(x|y) = 0,918 + 0,667 bits = 1,585 bits
 
 
 (f) I[x, y]
 
-I(x,y) = 
+I(x,y) = H(x) + H(y) - H(x,y) = 0,252 bits
+
+Other resources:
+https://faculty.math.illinois.edu/~hildebr/408/408jointdiscrete.pdf
+http://users.stat.ufl.edu/~abhisheksaha/sta4321/lect27.pdf
+http://homepage.stat.uiowa.edu/~rdecook/stat2020/notes/ch5_pt1.pdf
+https://www.khanacademy.org/math/ap-statistics/probability-ap/stats-conditional-probability/a/conditional-probability-using-two-way-tables
 
 
 ##### :black_small_square: 1.41 Using the sum and product rules of probability, show that the mutual information I(x, y) satisfies the relation (1.121).
