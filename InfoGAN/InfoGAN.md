@@ -41,7 +41,7 @@ Lookup 2nd derivative
 
 
 ##### :black_small_square: 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.
-The joint distribution p(x, y) for two binary variables x and y used:\
+The joint distribution p(x, y) for two binary variables x and y used:
 
 | x/y | 0 | 1 | p(x) |
 | --- | --- | --- | --- |
@@ -159,9 +159,11 @@ https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --
 https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence
 
 JSD(P||Q) = 1/2 * KL(P||M) + 1/2 * KL(Q||M)
+
 M = 1/2 * (P+Q)
 
 I(X;Z) = JSD(P||Q)
+
 “It follows from the above result that the Jensen–Shannon divergence is bounded by 0 and 1 because mutual information is non-negative and bounded by H(Z)=1. The JSD is not always bounded by 0 and 1: the upper limit of 1 arises here because we are considering the specific case involving the binary variable Z.” (https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence#Relation_to_mutual_information)
 
 
@@ -172,15 +174,15 @@ D(p||q) = KL(p,q) = Σ p(x) log(p(x)/q(x))
 
 0 ≤ KL ≤ ∞ (infinity)
 
-KL(p,q) = 0:
-When the two probability distributions p,q are identical:
+KL(p,q) = 0:\
+When the two probability distributions p,q are identical:\
 p(x)/q(x) = 1 and log(p(x)/q(x)) = 0 which results in KL(p,q) = 0
 
-KL(p,q) = ∞:
+KL(p,q) = ∞:\
 “In the context of coding theory, DKL(P||Q) can be construed as measuring the expected number of extra bits required to code samples from P using a code optimized for Q rather than the code optimized for P.” (https://stats.stackexchange.com/questions/323069/can-kl-divergence-ever-be-greater-than-1)
 
-When they are totally different you would need an infinite number of extra bits and, therefore, the cross entropy and the KL would be infinite.
-Hp(q) = -Σ q(x) log(p(x)) = ∞
+When they are totally different you would need an infinite number of extra bits and, therefore, the cross entropy and the KL would be infinite.\
+Hp(q) = -Σ q(x) log(p(x)) = ∞\
 KL(p,q) = Hp(q) - H(q) = ∞
 
 (p(x)/q(x) = ∞ and log(p(x)/q(x)) = ∞ which results in KL(p,q) = ∞ ???)
