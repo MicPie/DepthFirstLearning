@@ -188,6 +188,8 @@ KL(p,q) = Hp(q) - H(q) = ∞
 
 ##### :black_small_square: In the paper, why do they say “In practice, equation 1 may not provide sufficient gradient for G to learn well. Early in learning, when G is poor, D can reject samples with high confidence because they are clearly different from the training data. In this case, log(1−D(G(z)))saturates”?
 
+See the derivative of the loss functions at x = 0 in the pictures at the next question. There the non-saturating loss (green, derivation in orange) has a much higher derivative when the G is learning to fake the pictures better (-log(D(G(z)) = 0 or slightly higher) compared to the saturating loss function (blue).
+
 ##### :black_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating ~~discriminator~~ generator (?) loss.
 See posted [TF implementation](https://colab.research.google.com/drive/1joM97ITFowvWU_qgRjQRiOKajHQKKH80#forceEdit=true&offline=tru&sandboxMode=true&scrollTo=gfxatvsVV5LA):
 ```
