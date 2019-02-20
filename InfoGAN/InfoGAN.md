@@ -31,11 +31,13 @@ Lookup 2nd derivative
 
 
 ##### :black_small_square: 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).
+(1.111) H[y|x] = − ∫∫ p(y, x) lnp(y|x) dy dx
 (1.112) H[x,y] = H[y|x] + H[x]
 
 
 ##### :black_small_square: 1.38 Using proof by induction, show that the inequality (1.114) for convex functions implies the result (1.115).
-???
+(1.114) f(λa + (1 − λ)b)  λf(a) + (1 − λ)f(b)
+(1.115) <Insert picture here>
 
 
 ##### :black_small_square: 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.
@@ -51,11 +53,6 @@ H(x) =  ∑(over x) p(x) log2(1/p(x)) = - ∑(over x) p(x) log2(p(x))\
 H(x|y) =  - ∑(over x,y) p(x,y) log2(p(x,y)/p(y))\
 H(x,y) =  - ∑(over x,y) p(x,y) log2(p(x,y))
 
-
-https://en.wikipedia.org/wiki/Joint_probability_distribution#Draws_from_an_urn
-
-
-**CHECK PRML Page 14?**
 
 Evaluate the following quantities:
 
@@ -94,6 +91,8 @@ I(x,y) =
 ##### :black_small_square: 1.41 Using the sum and product rules of probability, show that the mutual information I(x, y) satisfies the relation (1.121).
 (1.121) I[x, y] = H[x] − H[x|y] = H[y] − H[y|x]
 
+I(x,y) = H(x) + H(y) - H(x,y)
+
 
 #### :black_medium_small_square: How is Mutual Information similar to correlation? How are they different? Are they directly related under some conditions?
 “Intuitively, mutual information measures the information that X and Y share: It measures how much knowing one of these variables reduces uncertainty about the other. For example, if X and Y are independent, then knowing X does not give any information about Y and vice versa, so their mutual information is zero. At the other extreme, if X is a deterministic function of Y and Y is a deterministic function of X then all information conveyed by X is shared with Y: knowing X determines the value of Y and vice versa. As a result, in this case the mutual information is the same as the uncertainty contained in Y (or X) alone, namely the entropy of Y (or X). Moreover, this mutual information is the same as the entropy of X and as the entropy of Y. (A very special case of this is when X and Y are the same random variable.)
@@ -103,7 +102,6 @@ Mutual information is a measure of the inherent dependence expressed in the join
 Log(p(x,y) / (p(x) p(y)) = log(1) = 0. Moreover, mutual information is nonnegative (i.e. I(X;Y) >= 0 see below) and symmetric (i.e. I(X;Y) = I(Y;X) see below).”
 
 “Not limited to real-valued random variables like the correlation coefficient, MI is more general and determines how similar the joint distribution p(x,y) is to the products of factored marginal distribution p(x) p(y). MI is the expected value of the pointwise mutual information (PMI).“ (https://en.wikipedia.org/wiki/Mutual_information)
-
 
 Formulas see https://stats.stackexchange.com/questions/81659/mutual-information-versus-correlation
 
@@ -117,7 +115,6 @@ Reversely, I(X,Y) is the average value of the logarithmic measure of distance fr
 
 So the two are not antagonistic—they are complementary, describing different aspects of the association between two random variables. One could comment that Mutual Information "is not concerned" whether the association is linear or not, while Covariance may be zero and the variables may still be stochastically dependent. On the other hand, Covariance can be calculated directly from a data sample without the need to actually know the probability distributions involved (since it is an expression involving moments of the distribution), while Mutual Information requires knowledge of the distributions, whose estimation, if unknown, is a much more delicate and uncertain work compared to the estimation of Covariance.” 
 (https://stats.stackexchange.com/questions/81659/mutual-information-versus-correlation)
-
 
 Picture from https://www.quora.com/What-is-the-difference-between-mutual-information-and-correlation
 
@@ -136,8 +133,35 @@ https://en.wikipedia.org/wiki/Entropy_(information_theory)#Further_properties --
 ### Questions:
 
 ##### :black_small_square: Prove that 0≤JSD(P||Q)≤1 bit for all P, Q. When are the bounds achieved?
+https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence
+
+JSD(P||Q) = 1/2 * KL(P||M) + 1/2 * KL(Q||M)
+M = 1/2 * (P+Q)
+
+I(X;Z) = JSD(P||Q)
+“It follows from the above result that the Jensen–Shannon divergence is bounded by 0 and 1 because mutual information is non-negative and bounded by H(Z)=1. The JSD is not always bounded by 0 and 1: the upper limit of 1 arises here because we are considering the specific case involving the binary variable Z.” (https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence#Relation_to_mutual_information)
+
 
 ##### :black_small_square: What are the bounds for KL divergence? When are those bounds achieved?
+https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence
+
+D(p||q) = KL(p,q) = Σ p(x) log(p(x)/q(x))
+
+0 ≤ KL ≤ ∞ (infinity)
+
+KL(p,q) = 0:
+When the two probability distributions p,q are identical:
+p(x)/q(x) = 1 and log(p(x)/q(x)) = 0 which results in KL(p,q) = 0
+
+KL(p,q) = ∞:
+“In the context of coding theory, DKL(P||Q) can be construed as measuring the expected number of extra bits required to code samples from P using a code optimized for Q rather than the code optimized for P.” (https://stats.stackexchange.com/questions/323069/can-kl-divergence-ever-be-greater-than-1)
+
+When they are totally different you would need an infinite number of extra bits and, therefore, the cross entropy and the KL would be infinite.
+Hp(q) = -Σ q(x) log(p(x)) = ∞
+KL(p,q) = Hp(q) - H(q) = ∞
+
+(p(x)/q(x) = ∞ and log(p(x)/q(x)) = ∞ which results in KL(p,q) = ∞ ???)
+
 
 ##### :black_small_square: In the paper, why do they say “In practice, equation 1 may not provide sufficient gradient for G to learn well. Early in learning, when G is poor, D can reject samples with high confidence because they are clearly different from the training data. In this case, log(1−D(G(z)))saturates”?
 
