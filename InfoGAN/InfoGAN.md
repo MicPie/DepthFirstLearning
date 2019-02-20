@@ -181,6 +181,11 @@ def s_generator_loss(generated_output):
 ```
 Saturating loss seems wrong?
 
+Blue: saturating loss
+Green: non-saturating loss
+Orange: wrong saturating loss?
+Dashed lines: derivation of the loss function
+
 ![InfoGAN_saturation_non-saturating_loss_graph](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_graph.jpg)
 ![InfoGAN_saturation_non-saturating_loss_legend](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_legend.jpg)
 
