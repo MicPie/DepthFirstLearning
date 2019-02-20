@@ -179,6 +179,17 @@ def ns_generator_loss(generated_output):
 def s_generator_loss(generated_output):
     return tf.reduce_mean(1-tf.log(generated_output))
 ```
+Saturating loss seems wrong?
+
+![InfoGAN_saturation_non-saturating_loss_graph](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_graph.jpg)
+![InfoGAN_saturation_non-saturating_loss_legend](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_legend.jpg)
+
+```
+# Correct saturating G loss?
+def s_generator_loss(generated_output):
+    return tf.reduce_mean(tf.log(1-generated_output))
+```
+
 The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
 
 ln = −wn⋅[yn⋅log(σ(xn))+(1−yn)⋅log(1−σ(xn))]
