@@ -80,7 +80,7 @@ p(y0|x0) = (1/3) / (1/3 + 1/3) = 1/2\
 p(y1|x0) = (1/3) / (1/3 + 1/3) = 1/2\
 p(y0|x1) = (0) / (1/3) = 0\
 p(y1|x1) = (1/3) / (1/3) = 1\
-H(Y|X) = sum over x,y( -(px,y) log2(p(y|x)) (formula from https://colah.github.io/posts/2015-09-Visual-Information/)\
+H(Y|X) = sum over x,y( -(px,y) log2(p(y|x)) (formula from https://colah.github.io/posts/2015-09-Visual-Information/) \
 H(y|x) = 0,667 bits
 
 
