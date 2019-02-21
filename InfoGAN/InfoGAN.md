@@ -43,11 +43,11 @@ Lookup 2nd derivative
 ##### :black_small_square: 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.
 The joint distribution p(x, y) for two binary variables x and y used:
 
-| x/y | 0 | 1 | p(x) |
+| y/x | x0 | x1 | p(y) |
 | --- | --- | --- | --- |
-| 0 | 1/3 | 1/3 | 2/3 |
-| 1 | 0 | 1/3 | 1/3 |
-| p(y) | 1/3 | 2/3 | 1 |
+| y0 | 1/3 | 0 | 1/3 |
+| y1 | 1/3 | 1/3 | 2/3 |
+| p(x) | 2/3 | 1/3 | 1 |
 
 H(x) =  ∑(over x) p(x) log2(1/p(x)) = - ∑(over x) p(x) log2(p(x))\
 H(x|y) =  - ∑(over x,y) p(x,y) log2(p(x,y)/p(y))\
