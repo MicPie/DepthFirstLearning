@@ -241,3 +241,36 @@ if yn == 1: 1−log(σ(xn))
 --> Check with implementation?
 
 --> Colab notebook does not show a real difference?
+
+
+## 3 InfoGAN
+
+### Required Reading
+
+- [x] InfoGAN
+- [ ] A correction to a proof in the paper
+
+### Optional Reading
+- [x] A blog post explaining InfoGAN
+
+### Questions
+
+How does one compute logQ(c|x) in practice? How does this answer change based on the choice of the type of random variables in c?
+
+Which objective in the paper can actually be optimized with gradient-based algorithms? How? (An answer to this needs to refer to “the reparameterization trick”)
+
+Why is an auxiliary Q distribution necessary?
+
+Draw a neural network diagram for InfoGAN
+
+n the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?
+
+In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?
+
+Open-ended question: Is InfoGAN guaranteed to find disentangled representations? How would you tell if a representation is disentangled?
+
+## Implementations
+- Original implementation https://github.com/openai/InfoGAN
+- https://github.com/Natsu6767/InfoGAN-PyTorch
+- https://github.com/pianomania/infoGAN-pytorch
+- https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/infogan/infogan.py
