@@ -240,6 +240,9 @@ if yn == 1: 1−log(σ(xn))
 
 --> Check with implementation?
 
+https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a
+https://gombru.github.io/2018/05/23/cross_entropy_loss/
+
 --> Colab notebook does not show a real difference?
 
 
