@@ -224,9 +224,12 @@ def s_generator_loss(generated_output):
 
 The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
 
-ln = −wn⋅[yn⋅log(σ(xn))+(1−yn)⋅log(1−σ(xn))]
+ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
 
-RECHECK BCE LOSS FORMULAS!!!
+[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):\
+J(D): J(D) = −1⋅log(D(x))-(1−0)⋅log(1−D(G(z))) = −log(D(x))-log(1−D(G(z)) (**BCE???**, p.21)\
+Minimax zero-sum game: J(D) = - J(G) = log(D(x))+log(1−D(G(z)) = log(1−D(G(z)) **???**\
+Heuristic, non-saturating game: J(G) = -log(D(G(z)) (p.22)
 
 The **non-saturating** loss:\
 criterion = ln\
