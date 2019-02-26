@@ -222,15 +222,6 @@ def s_generator_loss(generated_output):
     return tf.reduce_mean(tf.log(1-generated_output))
 ```
 
-The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
-
-ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
-
-[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):\
-J(D): J(D) = −1⋅log(D(x))-(1−0)⋅log(1−D(G(z))) = −log(D(x))-log(1−D(G(z)) (**BCE???**, p.21)\
-Minimax zero-sum game: J(D) = - J(G) = log(D(x))+log(1−D(G(z)) = log(1−D(G(z)) **???**\
-Heuristic, non-saturating game: J(G) = -log(D(G(z)) (p.22)
-
 The **non-saturating** loss:\
 criterion = ln\
 if yn == 0: −log(1−σ(xn))\
@@ -242,6 +233,15 @@ if yn == 0: 1−log(1−σ(xn))\
 if yn == 1: 1−log(σ(xn))
 
 --> Check with implementation?
+
+The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
+
+ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
+
+[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):\
+J(D): J(D) = −1⋅log(D(x))-(1−0)⋅log(1−D(G(z))) = −log(D(x))-log(1−D(G(z)) (**BCE???**, p.21)\
+Minimax zero-sum game: J(D) = - J(G) = log(D(x))+log(1−D(G(z)) = log(1−D(G(z)) **???**\
+Heuristic, non-saturating game: J(G) = -log(D(G(z)) (p.22)
 
 https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a
 https://gombru.github.io/2018/05/23/cross_entropy_loss/
