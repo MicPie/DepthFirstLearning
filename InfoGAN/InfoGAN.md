@@ -239,9 +239,9 @@ The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsL
 ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
 
 [NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):\
-J(D): J(D) = −1⋅log(D(x))-(1−0)⋅log(1−D(G(z))) = −log(D(x))-log(1−D(G(z)) (**BCE???**, p.21)\
-Minimax zero-sum game: J(D) = - J(G) = log(D(x))+log(1−D(G(z)) = log(1−D(G(z)) **???**\
-Heuristic, non-saturating game: J(G) = -log(D(G(z)) (p.22)
+J(D): J(D) = −1⋅log(D(x))-(1−0)⋅log(1−D(G(z))) = −log(D(x))-log(1−D(G(z)) (**BCE ?**, p.21)\
+Minimax zero-sum game: J(D) = - J(G) = log(D(x))+log(1−D(G(z)) = log(1−D(G(z)) (**yn = 0 ?**, p.22)\
+Heuristic, non-saturating game: J(G) = -log(D(G(z)) (**yn = 1 ?**, p.22)
 
 https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a
 https://gombru.github.io/2018/05/23/cross_entropy_loss/
