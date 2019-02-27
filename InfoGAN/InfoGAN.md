@@ -238,15 +238,26 @@ The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsL
 
 ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
 
-[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):\
-J(D): J(D) = −1⋅log(D(x))-(1−0)⋅log(1−D(G(z))) = −log(D(x))-log(1−D(G(z)) (**BCE ?**, p.21)\
-Minimax zero-sum game: J(D) = - J(G) = log(D(x))+log(1−D(G(z)) = log(1−D(G(z)) (**yn = 0 ?**, p.22)\
-Heuristic, non-saturating game: J(G) = -log(D(G(z)) (**yn = 1 ?**, p.22)
+**[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):**\
+
+D loss (BCE, p.21, formula 8):\
+J(D) = −y⋅log(D(x))-(1−y)⋅log(1−D(G(z)))\
+Training is split in training with real data (y = 1, no y = 0) and in training with fake data (y = 0).
+
+Saturating G loss (minimax, zero-sum game, p.22):\
+J(D) = -J(G)\
+J(G) = y⋅log(D(x))+(1−y)⋅log(1−D(G(z)))\
+if y = 0: J(G) = log(1−D(G(z)))
+
+Non-saturating G loss (Heuristic, p.22):\
+J(G) = y⋅log(D(x))+(1−y)⋅log(1−D(G(z)))
+
+invert labels with y = 1 and "flip target used to construct the cross entropy cost" (p.22):\
+J(G) = -log(D(G(z)))
+
 
 https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a
 https://gombru.github.io/2018/05/23/cross_entropy_loss/
-
---> Colab notebook does not show a real difference?
 
 
 ## 3 InfoGAN
