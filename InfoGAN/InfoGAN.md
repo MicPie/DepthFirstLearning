@@ -238,7 +238,7 @@ The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsL
 
 ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
 
-**[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):**\
+**[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):**
 
 D loss (BCE, p.21, formula 8):\
 J(D) = −y⋅log(D(x))-(1−y)⋅log(1−D(G(z)))\
