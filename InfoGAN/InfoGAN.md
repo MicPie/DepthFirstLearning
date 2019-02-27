@@ -252,7 +252,9 @@ if y = 0: J(G) = log(1−D(G(z)))
 Non-saturating G loss (Heuristic, p.22):\
 J(G) = y⋅log(D(x))+(1−y)⋅log(1−D(G(z)))
 
-invert labels with y = 1 and "flip target used to construct the cross entropy cost" (p.22):\
+"Instead of flipping the sign on the discriminator's cost to obtain a cost for the generator, we flip the target used to construct the
+cross-entropy cost." (p.22):\
+invert labels with y = 1\
 J(G) = -log(D(G(z)))
 
 
