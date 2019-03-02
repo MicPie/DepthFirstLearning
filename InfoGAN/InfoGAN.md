@@ -193,50 +193,19 @@ KL(p,q) = Hp(q) - H(q) = ∞
 See the derivative of the loss functions at x = 0 in the pictures at the next question. There the non-saturating loss (green, derivation in orange) has a much higher derivative when the G is learning to fake the pictures better (-log(D(G(z)) = 0 or slightly higher) compared to the saturating loss function (blue).
 
 ##### :black_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating ~~discriminator~~ generator (?) loss.
-See posted [TF implementation](https://colab.research.google.com/drive/1joM97ITFowvWU_qgRjQRiOKajHQKKH80#forceEdit=true&offline=tru&sandboxMode=true&scrollTo=gfxatvsVV5LA):
-```
-def discriminator_loss(real_output, generated_output):
-    return -tf.reduce_mean(tf.log(real_output) + tf.log(1-generated_output))
-
-# non-saturation G loss
-def ns_generator_loss(generated_output):
-    return -tf.reduce_mean(tf.log(generated_output))
-
-# saturating G loss
-def s_generator_loss(generated_output):
-    return tf.reduce_mean(1-tf.log(generated_output))
-```
-Saturating loss seems wrong?
 
 Blue: saturating loss\
 Green: non-saturating loss\
 Orange: wrong saturating loss?\
 Dashed lines: derivation of the loss functions (derivation of green and orange loss function is the same)
 
-![InfoGAN_saturation_non-saturating_loss_graph](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_graph.jpg)
-![InfoGAN_saturation_non-saturating_loss_legend](https://github.com/MicPie/DepthFirstLearning/blob/master/InfoGAN/InfoGAN_saturation_non-saturating_loss_legend.jpg)
-
-```
-# Correct saturating G loss?
-def s_generator_loss(generated_output):
-    return tf.reduce_mean(tf.log(1-generated_output))
-```
-
-The **non-saturating** loss:\
-criterion = ln\
-if yn == 0: −log(1−σ(xn))\
-if yn == 1: −log(σ(xn))
-
-The **saturating** loss:\
-criterion = 1 - ln\
-if yn == 0: 1−log(1−σ(xn))\
-if yn == 1: 1−log(σ(xn))
-
---> Check with implementation?
+![GAN_saturation vs non-saturating_G loss_figure](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.jpg)
 
 The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsLoss](https://pytorch.org/docs/stable/nn.html#bcewithlogitsloss) and using y = 0 or 1 to switch between fake and real:
 
 ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
+
+See [PyTorch DCGAN MNIST implementation notebook](https://nbviewer.jupyter.org/github/MicPie/DepthFirstLearning/blob/master/InfoGAN/dcgan_faces_tutorial_MNIST.ipynb) (based on the [PyTorch DCGAN tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#discriminator)).
 
 **[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):**\
 D loss (BCE, p.21, formula 8):\
