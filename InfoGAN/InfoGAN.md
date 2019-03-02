@@ -196,8 +196,7 @@ See the derivative of the loss functions at x = 0 in the pictures at the next qu
 
 Blue: saturating loss\
 Green: non-saturating loss\
-Orange: wrong saturating loss?\
-Dashed lines: derivation of the loss functions (derivation of green and orange loss function is the same)
+Dashed lines: derivations of the loss functions
 
 ![GAN_saturation vs non-saturating_G loss_figure](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.jpg)
 
