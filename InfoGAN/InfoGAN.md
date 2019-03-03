@@ -204,7 +204,7 @@ The generator losses can be implemented in PyTorch with [torch.nn.BCEWithLogitsL
 
 ln = −yn⋅log(σ(xn))-(1−yn)⋅log(1−σ(xn))
 
-See [PyTorch DCGAN MNIST implementation notebook](https://nbviewer.jupyter.org/github/MicPie/DepthFirstLearning/blob/master/InfoGAN/dcgan_faces_tutorial_MNIST.ipynb) (based on the [PyTorch DCGAN tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#discriminator)).
+See [PyTorch DCGAN MNIST implementation notebook](https://nbviewer.jupyter.org/github/MicPie/DepthFirstLearning/blob/master/InfoGAN/dcgan_faces_tutorial_MNIST_v2.ipynb) (based on the [PyTorch DCGAN tutorial](https://pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html#discriminator)).
 
 **[NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160):**\
 D loss (BCE, p.21, formula 8):\
