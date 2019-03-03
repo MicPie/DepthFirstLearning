@@ -19,30 +19,32 @@ For more perspectives and deeper dependencies, see Metacademy:
 - [ ] [KL diverence](https://metacademy.org/graphs/concepts/kl_divergence)
 
 ### Questions:
-#### :white_medium_small_square:From PRML:
-##### :black_small_square: 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.
-H(x,y) = H(x) + H(y) if H(x|y) = H(x) and H(y|x) = H(y)\
-H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)
+#### :black_medium_small_square:From PRML:
+##### :white_small_square: 1.31 Consider two variables x and y having joint distribution p(x, y). Show that the differential entropy of this pair of variables satisfies H(x,y) <= H(x) + H(y) with equality if, and only if, x and y are statistically independent.
+if H(x|y) = H(x) and H(y|x) = H(y)\
+H(x) + H(y|x) = H(y) + H(x|y) = H(x) + H(y)\
+H(x,y) = H(x) + H(y)
+
 
 No mutual information if x and y are independent:\
 I(x,y) = H(x) + H(y) - H(x,y) because H(x,y) = H(x) + H(y)
 
 
-##### :white_small_square: 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.
+##### :black_small_square: 1.36 A strictly convex function is defined as one for which every chord lies above the function. Show that this is equivalent to the condition that the second derivative of the function be positive.
 Lookup 2nd derivative
 
 
-##### :white_small_square: 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).
+##### :black_small_square: 1.37 Using the definition (1.111) together with the product rule of probability, prove the result (1.112).
 (1.111) H[y|x] = − ∫∫ p(y, x) lnp(y|x) dy dx\
 (1.112) H[x,y] = H[y|x] + H[x]
 
 
 ##### :black_small_square: 1.38 Using proof by induction, show that the inequality (1.114) for convex functions implies the result (1.115).
-(1.114) f(λa + (1 − λ)b)  λf(a) + (1 − λ)f(b)
+(1.114) f(λa + (1 − λ)b)  λf(a) + (1 − λ)f(b)\
 (1.115) <Insert picture here>
 
 
-##### :black_small_square: 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.
+##### :white_small_square: 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.
 The joint distribution p(x, y) for two binary variables x and y used:
 
 | y/x | x0 | x1 | p(y) |
@@ -119,7 +121,7 @@ https://www.khanacademy.org/math/ap-statistics/probability-ap/stats-conditional-
 I(x,y) = H(x) + H(y) - H(x,y)
 
 
-#### :black_medium_small_square: How is Mutual Information similar to correlation? How are they different? Are they directly related under some conditions?
+#### :white_medium_small_square: How is Mutual Information similar to correlation? How are they different? Are they directly related under some conditions?
 “Intuitively, mutual information measures the information that X and Y share: It measures how much knowing one of these variables reduces uncertainty about the other. For example, if X and Y are independent, then knowing X does not give any information about Y and vice versa, so their mutual information is zero. At the other extreme, if X is a deterministic function of Y and Y is a deterministic function of X then all information conveyed by X is shared with Y: knowing X determines the value of Y and vice versa. As a result, in this case the mutual information is the same as the uncertainty contained in Y (or X) alone, namely the entropy of Y (or X). Moreover, this mutual information is the same as the entropy of X and as the entropy of Y. (A very special case of this is when X and Y are the same random variable.)
 
 Mutual information is a measure of the inherent dependence expressed in the joint distribution of X and Y relative to the joint distribution of X and Y under the assumption of independence. Mutual information therefore measures dependence in the following sense: I(X;Y) = 0 if and only if X and Y are independent random variables. This is easy to see in one direction: if X and Y are independent, then p(x,y) = p(x) p(y), and therefore:
@@ -144,7 +146,7 @@ So the two are not antagonistic—they are complementary, describing different a
 Picture from https://www.quora.com/What-is-the-difference-between-mutual-information-and-correlation
 
 
-#### :black_medium_small_square: In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?
+#### :white_medium_small_square: In classification problems, minimizing cross-entropy loss is the same as minimizing the KL divergence of the predicted class distribution from the true class distribution. Why do we minimize the KL, rather than other measures, such as L2 distance?
 See solution at https://www.depthfirstlearning.com/2018/InfoGAN#1-information-theory.
 
 ## 2 Generative Adversarial Networks (GAN)
@@ -169,7 +171,7 @@ I(X;Z) = JSD(P||Q)
 “It follows from the above result that the Jensen–Shannon divergence is bounded by 0 and 1 because mutual information is non-negative and bounded by H(Z)=1. The JSD is not always bounded by 0 and 1: the upper limit of 1 arises here because we are considering the specific case involving the binary variable Z.” (https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence#Relation_to_mutual_information)
 
 
-##### :black_small_square: What are the bounds for KL divergence? When are those bounds achieved?
+##### :white_small_square: What are the bounds for KL divergence? When are those bounds achieved?
 https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence
 
 D(p||q) = KL(p,q) = Σ p(x) log(p(x)/q(x))
@@ -190,11 +192,11 @@ KL(p,q) = Hp(q) - H(q) = ∞
 (p(x)/q(x) = ∞ and log(p(x)/q(x)) = ∞ which results in KL(p,q) = ∞ ???)
 
 
-##### :black_small_square: In the paper, why do they say “In practice, equation 1 may not provide sufficient gradient for G to learn well. Early in learning, when G is poor, D can reject samples with high confidence because they are clearly different from the training data. In this case, log(1−D(G(z)))saturates”?
+##### :white_small_square: In the paper, why do they say “In practice, equation 1 may not provide sufficient gradient for G to learn well. Early in learning, when G is poor, D can reject samples with high confidence because they are clearly different from the training data. In this case, log(1−D(G(z)))saturates”?
 
-See the derivative of the loss functions at x = 0 in the pictures at the next question. There the non-saturating loss (green, derivation in orange) has a much higher derivative when the G is learning to fake the pictures better (-log(D(G(z)) = 0 or slightly higher) compared to the saturating loss function (blue).
+See the derivative of the loss functions at x = 0 in the pictures at the next question. There the non-saturating loss (green) has a much higher derivative when the G is learning to fake the pictures better (-log(D(G(z)) = 0 or slightly higher) compared to the saturating loss function (blue).
 
-##### :black_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating ~~discriminator~~ generator (?) loss.
+##### :white_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating ~~discriminator~~ generator (?) loss.
 
 Blue: saturating loss (ln(1-x))\
 Green: non-saturating loss (-ln(x)\
