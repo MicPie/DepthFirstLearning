@@ -246,7 +246,7 @@ Why is an auxiliary Q distribution necessary?
 
 Draw a neural network diagram for InfoGAN
 
-n the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?
+In the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?
 
 In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?
 
