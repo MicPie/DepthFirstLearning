@@ -39,7 +39,7 @@ Lookup 2nd derivative
 
 ##### :black_small_square: 1.38 Using proof by induction, show that the inequality (1.114) for convex functions implies the result (1.115).
 (1.114) f(λa + (1 − λ)b)  λf(a) + (1 − λ)f(b)\
-(1.115) <Insert picture here>
+(1.115) (Insert picture here)
 
 
 ##### :white_small_square: 1.39 Consider two binary variables x and y having the joint distribution given in Table 1.3.
