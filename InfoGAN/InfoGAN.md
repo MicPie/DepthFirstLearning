@@ -1,8 +1,6 @@
 # InfoGAN
 Material from the lecture about InfoGAN from https://www.depthfirstlearning.com/2018/InfoGAN.
 
-\(P(Y | X; params)\)
-
 ## 1 Information Theory
 
 ### Required Reading:
