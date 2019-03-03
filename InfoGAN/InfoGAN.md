@@ -194,9 +194,9 @@ See the derivative of the loss functions at x = 0 in the pictures at the next qu
 
 ##### :black_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating ~~discriminator~~ generator (?) loss.
 
-Blue: saturating loss\
-Green: non-saturating loss\
-Dashed lines: derivations of the loss functions
+Blue: saturating loss (ln(1-x))\
+Green: non-saturating loss (-ln(x)\
+Dashed lines: derivations of the loss functions (Blue: -1/(1-x), Green: -1/x)
 
 ![GAN_saturation vs non-saturating_G loss_figure](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.jpg)
 
