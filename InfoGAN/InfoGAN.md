@@ -205,7 +205,7 @@ Dashed lines: derivations of the loss functions (Blue: -1/(1-x), Green: -1/x)
 ![GAN_saturation vs non-saturating_G loss_figure 2](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.png)\
 Plot from [NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160) p.26 resembles the above plots.
 
-How does this relate to this explanation: https://www.depthfirstlearning.com/assets/gan_gradient.pdf\
+How does this relate to this explanation: https://www.depthfirstlearning.com/assets/gan_gradient.pdf \
 [WolframAlpha plot other explanation](https://www.wolframalpha.com/input/?i=plot+log(1+%E2%88%92+sigmoid(x))+and+log(sigmoid(x))+for+x+from+-20+to+20)\
 Another explanation for the same effect?
 
