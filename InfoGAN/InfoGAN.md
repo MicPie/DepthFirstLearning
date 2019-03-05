@@ -201,7 +201,11 @@ Dashed lines: derivations of the loss functions (Blue: -1/(1-x), Green: -1/x)
 ![GAN_saturation vs non-saturating_G loss_figure 1](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.jpg)
 
 [WolframAlpha plot](https://www.wolframalpha.com/input/?i=plot+(ln(1-x))+and+(-ln(x))+for+x+from+0+to+1)
+[WolframAlpha plot incl. 1. derivation](https://www.wolframalpha.com/input/?i=plot+(ln(1-x))+and+(-ln(x))+and+derivation(ln(1-x))+and+derivation(-ln(x))for+x+from+0+to+1)
 ![GAN_saturation vs non-saturating_G loss_figure 2](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.png)
+
+How does this realte to this explanation: https://www.depthfirstlearning.com/assets/gan_gradient.pdf
+[WolframAlpha plot other explanation](https://www.wolframalpha.com/input/?i=plot+log(1+%E2%88%92+sigmoid(x))+and+log(sigmoid(x))+for+x+from+-20+to+20)
 
 ##### :white_small_square: Implement a Colab that trains a GAN for MNIST. Try both the saturating and non-saturating ~~discriminator~~ generator (?) loss.
 
