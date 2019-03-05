@@ -194,14 +194,10 @@ KL(p,q) = Hp(q) - H(q) = ∞
 
 See the derivative of the loss functions at x = 0 in the pictures at the next question. There the non-saturating loss (green) has a much higher derivative when the G is learning to fake the pictures better (-log(D(G(z)) = 0 or slightly higher) compared to the saturating loss function (blue).
 
-Blue: saturating loss (ln(1-x))\
-Green: non-saturating loss (-ln(x)\
-Dashed lines: derivations of the loss functions (Blue: -1/(1-x), Green: -1/x)
+Blue: saturating loss = ln(1-x), derivation = -1/(1-x)\
+Green: non-saturating loss = -ln(x), derivation = -1/x\
 
-![GAN_saturation vs non-saturating_G loss_figure 1](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.jpg)
-
-[WolframAlpha plot](https://www.wolframalpha.com/input/?i=plot+(ln(1-x))+and+(-ln(x))+for+x+from+0+to+1)\
-[WolframAlpha plot incl. 1. derivation](https://www.wolframalpha.com/input/?i=plot+(ln(1-x))+and+(-ln(x))+and+derivation(ln(1-x))+and+derivation(-ln(x))for+x+from+0+to+1)\
+[WolframAlpha plot incl. derivations](https://www.wolframalpha.com/input/?i=plot+(ln(1-x))+and+(-ln(x))+and+derivation(ln(1-x))+and+derivation(-ln(x))for+x+from+0+to+1)\
 ![GAN_saturation vs non-saturating_G loss_figure 2](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.png)\
 Plot from [NIPS 2016 Tutorial: Generative Adversarial Networks](https://arxiv.org/abs/1701.00160) p.26 resembles the above plots.
 
