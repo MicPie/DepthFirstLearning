@@ -166,7 +166,11 @@ M = 1/2 * (P+Q)
 
 I(X;Z) = JSD(P||Q)
 
+https://en.wikipedia.org/wiki/Jensen–Shannon_divergence#Bounds
+
 “It follows from the above result that the Jensen–Shannon divergence is bounded by 0 and 1 because mutual information is non-negative and bounded by H(Z)=1. The JSD is not always bounded by 0 and 1: the upper limit of 1 arises here because we are considering the specific case involving the binary variable Z.” (https://en.wikipedia.org/wiki/Jensen%E2%80%93Shannon_divergence#Relation_to_mutual_information)
+
+https://dit.readthedocs.io/en/latest/measures/divergences/jensen_shannon_divergence.html#derivation
 
 
 ##### :white_small_square: What are the bounds for KL divergence? When are those bounds achieved?
