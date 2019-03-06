@@ -269,4 +269,4 @@ Open-ended question: Is InfoGAN guaranteed to find disentangled representations?
 - https://github.com/Natsu6767/InfoGAN-PyTorch (most up-to-date implementation; why does the [DHead](https://github.com/Natsu6767/InfoGAN-PyTorch/blob/4586919f2821b9b2e4aeff8a07c5003a5905c7f9/models/mnist_model.py#L52) uses sigmoid and not tanh?)
 - https://github.com/pianomania/infoGAN-pytorch
 - https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/infogan/infogan.py
-- https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference & http://saxarona.github.io/mathjax-viewer/
+- https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference, http://saxarona.github.io/mathjax-viewer/, https://arachnoid.com/latex/
