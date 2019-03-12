@@ -243,26 +243,39 @@ https://gombru.github.io/2018/05/23/cross_entropy_loss/
 ### Required Reading
 
 - [x] InfoGAN
-- [ ] A correction to a proof in the paper
+- [x] A correction to a proof in the paper
 
 ### Optional Reading
 - [x] A blog post explaining InfoGAN
 
 ### Questions
 
-How does one compute logQ(c|x) in practice? How does this answer change based on the choice of the type of random variables in c?
+**How does one compute logQ(c|x) in practice? How does this answer change based on the choice of the type of random variables in c?**
 
-Which objective in the paper can actually be optimized with gradient-based algorithms? How? (An answer to this needs to refer to “the reparameterization trick”)
+"For categorical latent code cj, we use the natural choice of softmax nonlinearity to represent Q(cj|x). For continuous latent code cj, there are more options depending on what is the true posterior P(cj|x). In our experiments, we have found that simply treating Q(cj|x) as a factored Gaussian is sufficient." ([InfoGAN paper](https://arxiv.org/abs/1606.03657), chapter 6, p.4)
 
-Why is an auxiliary Q distribution necessary?
 
-Draw a neural network diagram for InfoGAN
+**Which objective in the paper can actually be optimized with gradient-based algorithms? How? (An answer to this needs to refer to “the reparameterization trick”)**
 
-In the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?
 
-In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?
+**Why is an auxiliary Q distribution necessary?**
 
-Open-ended question: Is InfoGAN guaranteed to find disentangled representations? How would you tell if a representation is disentangled?
+
+**Draw a neural network diagram for InfoGAN**
+
+
+**In the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?**
+
+
+**In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?**
+
+The entropy for MNIST (10 classes):
+
+10 * -1/10 * log(1/10) = 2.3025...
+
+
+**Open-ended question: Is InfoGAN guaranteed to find disentangled representations? How would you tell if a representation is disentangled?**
+
 
 ## Implementations
 - Original implementation https://github.com/openai/InfoGAN
