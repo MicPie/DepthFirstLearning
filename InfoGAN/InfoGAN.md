@@ -269,7 +269,7 @@ https://gombru.github.io/2018/05/23/cross_entropy_loss/
 
 **In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?**
 
-The entropy for MNIST (10 classes):
+The entropy for MNIST (c ∼ Cat(K = 10, p = 0.1)):
 
 10 * -1/10 * log(1/10) = 2.3025...
 
