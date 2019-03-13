@@ -288,3 +288,7 @@ The entropy for MNIST with c ∼ Cat(K = 10, p = 0.1):
 - https://github.com/pianomania/infoGAN-pytorch
 - https://github.com/eriklindernoren/PyTorch-GAN/blob/master/implementations/infogan/infogan.py
 - https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference, http://saxarona.github.io/mathjax-viewer/, https://arachnoid.com/latex/
+
+## Other links
+- https://github.com/zhangqianhui/AdversarialNetsPapers
+- https://github.com/nightrome/really-awesome-gan
