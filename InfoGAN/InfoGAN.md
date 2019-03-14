@@ -198,8 +198,8 @@ KL(p,q) = Hp(q) - H(q) = ∞
 
 See the derivative of the loss functions at x = 0 in the pictures at the next question. There the non-saturating loss (green) has a much higher derivative when the G is learning to fake the pictures better (-log(D(G(z)) = 0 or slightly higher) compared to the saturating loss function (blue).
 
-Blue: saturating loss = ln(1-x), derivation = -1/(1-x)\
-Green: non-saturating loss = -ln(x), derivation = -1/x
+Saturating loss = ln(1-x), derivation = -1/(1-x)\
+Non-saturating loss = -ln(x), derivation = -1/x (= negative log-likelhood)
 
 [WolframAlpha plot incl. derivations](https://www.wolframalpha.com/input/?i=plot+(ln(1-x))+and+(-ln(x))+and+derivation(ln(1-x))+and+derivation(-ln(x))for+x+from+0+to+1)\
 ![GAN_saturation vs non-saturating_G loss_figure 2](https://raw.githubusercontent.com/MicPie/DepthFirstLearning/master/InfoGAN/sat_vs_nonsat_g_loss.png)\
