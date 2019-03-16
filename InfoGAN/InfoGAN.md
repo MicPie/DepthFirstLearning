@@ -273,7 +273,7 @@ https://towardsdatascience.com/infogan-generative-adversarial-networks-part-iii-
 
 ##### :white_small_square: In the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?
 
-It seems to be possible to optimize it with gradient-based algorithms:
+It seems to be possible to optimize a probability density with gradient-based algorithms:
 - https://www.reddit.com/r/MachineLearning/comments/5us720/d_probability_density_estimation_using_neural/
 - https://arxiv.org/pdf/1612.01474.pdf
 
