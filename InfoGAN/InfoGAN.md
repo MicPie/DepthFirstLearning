@@ -279,7 +279,8 @@ It seems to be possible to optimize a probability density with gradient-based al
 
 ##### :white_small_square: In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?
 
-The lower bound LI(G,Q) is maximized to H(c) = 10 * -1/10 * log(1/10) = 2.3025... (H(c) for MNIST with c ∼ Cat(K = 10, p = 0.1))
+If the lower bound LI(G,Q) is maximized for MNIST with c ∼ Cat(K = 10, p = 0.1) the entropy H(c) can be calculated:
+H(c) = 10 * -1/10 * log(1/10) = ~2.30
 
 
 ##### :white_small_square: Open-ended question: Is InfoGAN guaranteed to find disentangled representations? How would you tell if a representation is disentangled?
