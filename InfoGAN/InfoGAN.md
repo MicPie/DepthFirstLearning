@@ -273,6 +273,9 @@ https://towardsdatascience.com/infogan-generative-adversarial-networks-part-iii-
 
 ##### :white_small_square: In the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?
 
+It seems to be possible to optimize it with gradient-based algorithms:
+- https://www.reddit.com/r/MachineLearning/comments/5us720/d_probability_density_estimation_using_neural/
+- https://arxiv.org/pdf/1612.01474.pdf
 
 ##### :white_small_square: In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?
 
@@ -281,7 +284,7 @@ The lower bound LI(G,Q) is maximized to H(c) = 10 * -1/10 * log(1/10) = 2.3025..
 
 ##### :white_small_square: Open-ended question: Is InfoGAN guaranteed to find disentangled representations? How would you tell if a representation is disentangled?
 
-You have a disentangled representation if the lower bound LI(G,Q) is maximized to H(c)?
+You have a disentangled representation if the lower bound LI(G,Q) is maximized to H(c). However, to know the exact value of H(c) you would need to know the probability distribution (e.g., in case of classes over the classes), which is not a straightforward task.
 
 
 ## Implementations
