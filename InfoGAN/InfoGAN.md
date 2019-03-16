@@ -283,7 +283,7 @@ Would a moving probability density estimation make sense?
 
 ##### :white_small_square: In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?
 
-If the lower bound LI(G,Q) is maximized for MNIST with c ∼ Cat(K = 10, p = 0.1) the entropy H(c) can be calculated:
+If the lower bound LI(G,Q) is maximized for MNIST with c ∼ Cat(K = 10, p = 0.1) the entropy H(c) can be calculated:\
 H(c) = 10 * -1/10 * log(1/10) = ~2.30
 
 
