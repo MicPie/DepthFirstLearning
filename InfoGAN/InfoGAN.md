@@ -250,36 +250,38 @@ https://gombru.github.io/2018/05/23/cross_entropy_loss/
 
 ### Questions
 
-**How does one compute logQ(c|x) in practice? How does this answer change based on the choice of the type of random variables in c? (What is logQ(c|x) when c is a Gaussian centered at fθ(x)? What about when c is the output of a softmax?)**
+##### :white_small_square: How does one compute logQ(c|x) in practice? How does this answer change based on the choice of the type of random variables in c? (What is logQ(c|x) when c is a Gaussian centered at fθ(x)? What about when c is the output of a softmax?)
 
 "In practice, we parametrize the auxiliary distribution Q as a neural network. In most experiments, Q and D share all convolutional layers and there is one final fully connected layer to output parameters for the conditional distribution Q(c|x), ... For categorical latent code cj, we use the natural choice of softmax nonlinearity to represent Q(cj|x). For continuous latent code cj, there are more options depending on what is the true posterior P(cj|x). In our experiments, we have found that simply treating Q(cj|x) as a factored Gaussian is sufficient." ([InfoGAN paper](https://arxiv.org/abs/1606.03657), chapter 6, p.4)
 
 https://www.quora.com/What-is-meant-by-factored-distribution
 
 
-**Which objective in the paper can actually be optimized with gradient-based algorithms? How? (An answer to this needs to refer to “the reparameterization trick”)**
+##### :white_small_square: Which objective in the paper can actually be optimized with gradient-based algorithms? How? (An answer to this needs to refer to “the reparameterization trick”)
 
 "We note that LI(G,Q) is easy to approximate with Monte Carlo simulation. In particular, LI can be maximized w.r.t. Q directly and w.r.t. G via the reparametrization trick. Hence LI(G,Q) can be added to GAN’s objectives with no change to GAN’s training procedure and we call the resulting algorithm Information Maximizing Generative Adversarial Networks (InfoGAN)." ([InfoGAN paper](https://arxiv.org/abs/1606.03657), chapter 6, p.4)
 
 
-**Why is an auxiliary Q distribution necessary?**
+##### :white_small_square: Why is an auxiliary Q distribution necessary?
+
+"In practice, the mutual information term I(c;G(z,c)) is hard to maximize directly as it requires access to the posterior P(c|x). Fortunately we can obtain a lower bound of it by defining an auxiliary distribution Q(c|x) to approximate P(c|x):" ([InfoGAN paper](https://arxiv.org/abs/1606.03657), chapter 5, p.3)
 
 
-**Draw a neural network diagram for InfoGAN**
+##### :white_small_square: Draw a neural network diagram for InfoGAN
 
 https://towardsdatascience.com/infogan-generative-adversarial-networks-part-iii-380c0c6712cd
 
-**In the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?**
+##### :white_small_square: In the paper they say “However, in this paper we opt for simplicity by fixing the latent code distribution and we will treat H(c) as a constant.”. What if you want to learn the latent code (say, if you don’t know that classes are balanced in the dataset). Can you still optimize for this with gradient-based algorithms? Can you implement this on an intentionally class-imbalanced variant of MNIST?
 
 
-**In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?**
+##### :white_small_square: In the paper they say “the lower bound … is quickly maximized to … and maximal mutual information is achieved”. How do they know this is the maximal value?
 
-The entropy for MNIST with c ∼ Cat(K = 10, p = 0.1):
-
-10 * -1/10 * log(1/10) = 2.3025...
+The lower bound LI(G,Q) is maximized to H(c) = 10 * -1/10 * log(1/10) = 2.3025... (H(c) for MNIST with c ∼ Cat(K = 10, p = 0.1))
 
 
-**Open-ended question: Is InfoGAN guaranteed to find disentangled representations? How would you tell if a representation is disentangled?**
+##### :white_small_square: Open-ended question: Is InfoGAN guaranteed to find disentangled representations? How would you tell if a representation is disentangled?
+
+You have a disentangled representation if the lower bound LI(G,Q) is maximized to H(c)?
 
 
 ## Implementations
