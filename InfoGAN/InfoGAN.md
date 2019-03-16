@@ -276,6 +276,7 @@ https://towardsdatascience.com/infogan-generative-adversarial-networks-part-iii-
 It seems to be possible to optimize a probability density function with gradient-based algorithms:
 - https://www.reddit.com/r/MachineLearning/comments/5us720/d_probability_density_estimation_using_neural/
 - https://arxiv.org/pdf/1612.01474.pdf
+
 Does the probability density function need to be based on the entire training data? Yes!?\
 Would a moving probability density estimation make sense?
 
