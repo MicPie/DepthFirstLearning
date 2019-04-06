@@ -191,7 +191,14 @@ When they are totally different you would need an infinite number of extra bits 
 Hp(q) = -Σ q(x) log(p(x)) = ∞\
 KL(p,q) = Hp(q) - H(q) = ∞
 
-(p(x)/q(x) = ∞ and log(p(x)/q(x)) = ∞ which results in KL(p,q) = ∞ ???)
+**Other and very likely better explanation:**<br>
+p(x)/q(x) = ∞ and log(p(x)/q(x)) = ∞ which results in KL(p,q) = ∞<br>
+https://stats.stackexchange.com/questions/351947/whats-the-maximum-value-of-kullback-leibler-kl-divergence<br>
+https://en.wikipedia.org/wiki/Support_(mathematics)#In_probability_and_measure_theory<br>
+https://math.stackexchange.com/questions/2859284/how-to-use-kullback-leibler-divergence-if-probability-distributions-have-differe<br>
+https://arxiv.org/pdf/math/0209021.pdf<br>
+https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Motivation<br>
+When the support of Q is not included in the support of P, i.e., Q has zero values where P is not zero, the upper bound of the KL is infinity.
 
 
 ##### :white_small_square: In the paper, why do they say “In practice, equation 1 may not provide sufficient gradient for G to learn well. Early in learning, when G is poor, D can reject samples with high confidence because they are clearly different from the training data. In this case, log(1−D(G(z)))saturates”?
